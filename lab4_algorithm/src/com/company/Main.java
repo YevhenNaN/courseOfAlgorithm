@@ -37,7 +37,7 @@ public class Main {
     public static int sumOfMaxPing = 0;
 
     //*************************************************************************************
-    public static int FindConnectionSum(int clientNode, ArrayList<Connection> connections, int amountOfNodes, int amountOfconnections, int serverPlace) {
+    public static int findConnectionSum(int clientNode, ArrayList<Connection> connections, int amountOfNodes, int amountOfconnections, int serverPlace) {
         if (clientNode != serverPlace) {
             boolean isFirstToServer = false;
 
@@ -93,7 +93,7 @@ public class Main {
             }
 
             if (nextnode != serverPlace)
-                FindConnectionSum(nextnode, connections, amountOfNodes, amountOfconnections, serverPlace);
+                findConnectionSum(nextnode, connections, amountOfNodes, amountOfconnections, serverPlace);
         }
 
         return sumOfMaxPing;
